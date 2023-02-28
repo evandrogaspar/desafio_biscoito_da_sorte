@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body{
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+main{
+  width: min(42.8rem, 90%);
+}
+
+main h1{
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+font-size: 2.4rem;
+line-height: 2.9rem;
+
+color: #34355B;
+
+margin-bottom: 1.4rem;
+
+}
+
+
+/* screen1 */
+
+main .screen1{
+  background: #fff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+
+
+  height: 42.4rem;
+  border-radius: .5rem;
+
+  padding: 4.8rem 8.4rem 0;
+
+  text-align: center;
+}
+
+main .screen1 p {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: #34355B;
+
+  margin-bottom: 2rem;
+}
+
+.screen1 img{
+ animation-name: shakeImage;
+ animation-duration: 600ms;
+ animation-timing-function: linear ;
+ animation-delay: 1s;
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+
+ cursor: pointer;
+}
+
+
+/* screen2 */
+
+main .screen2{
+  background: #fff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+
+  height: 59.4rem;
+  border-radius: .5rem;
+
+  padding: 4.8rem 6.4rem 0;
+
+  text-align: center;
+}
+
+.screen2 .card-text  {
+ font-family: 'Dancing Script', cursive;
+ font-size: 2.4rem;
+ line-height: 2.9rem;
+
+ background: #E4EDF1;
+ box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+
+ width: 29.3rem;
+
+ margin-bottom: 6rem;
+
+ animation: textUp 3s;
+}
+
+.screen2 img {
+  margin-bottom: 6rem;
+}
+
+.screen2 button {
+  border: none;
+
+  font-family:  'DM Sans', sans-serif; 
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+
+  width: 17.4rem;
+  height: 5.2rem;
+
+
+  background: #FF9500;
+  color: #fff;
+
+  border-radius: .4rem;
+
+  cursor: pointer;
+}
+
+.screen2 button:hover{
+  filter: brightness(0.9);
+}
+
+
+@keyframes shakeImage {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes textUp{
+  0% {
+    transform: translateY(200px) scale(0%);
+  } 
+  100%{
+ transform: translateY(0) scale(100%);
+  }
+}
+
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
